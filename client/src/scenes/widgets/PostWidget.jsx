@@ -14,13 +14,11 @@ import { setPost } from "state";
 
 const PostWidget = ({
   postId,
+  name,
   description,
   picturePath,
-  userPicturePath,
   likes,
-
 }) => {
-  // const [isComments, setIsComments] = useState(false);
   const dispatch = useDispatch();
   const token = useSelector((state) => state.token);
   const loggedInUserId = useSelector((state) => state.user._id);
@@ -46,7 +44,7 @@ const PostWidget = ({
 
   return (
     <WidgetWrapper m="2rem 0">
-
+   
       <Typography color={main} sx={{ mt: "1rem" }}>
         {description}
       </Typography>
@@ -74,7 +72,6 @@ const PostWidget = ({
 
 
         </FlexBetween>
-
 
       </FlexBetween>
 
